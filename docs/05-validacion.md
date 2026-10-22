@@ -47,3 +47,7 @@ En la primera ejecución de navegador fallaron dos comprobaciones: volver al car
 - CI y despliegue en un hosting real: todavía no configurados.
 
 El código permite seguir desarrollando la demo. No constituye una tienda de producción. Si alguien te vende lo contrario, que vuelva a leer el README.
+
+## Corrección de dependencias
+
+Se reprodujeron tres avisos de `npm audit`: uno moderado en `@vitest/mocker` y dos críticos contabilizados en `tinypool` y su dependencia directa `vitest`. Se actualizó Vitest de la rama 3 a 5.0.5, compatible con Vite 7 y Node 24. Se actualizaron manifiesto, lockfile y requisitos de Node, sin usar `npm audit fix --force` ni overrides de dependencias transitivas. Verificación posterior: instalación limpia con `npm ci`, `npm audit` con **0 vulnerabilidades**, build correcto, 4 pruebas unitarias y 9 pruebas de navegador aprobadas. Los resultados de auditoría dependen de los avisos conocidos en el momento de ejecutarla.

@@ -6,7 +6,7 @@ Una demo de café de especialidad: del diseño a una base de React que otro dev 
 
 ## Arrancar, que para eso vinimos
 
-Requiere Node **22.12 o superior** y npm. Entorno verificado: Node 24.19.0 y npm 11.9.0. El archivo `.node-version` registra esa versión. Trabajá desde la raíz de `cafe`:
+Requiere **Node 24 LTS (recomendado)** y npm. También admite Node 22 desde 22.12 y Node 26 o superior; las ramas impares 23 y 25 no están soportadas por Vitest 5. Entorno verificado: Node 24.19.0 y npm 11.9.0. El archivo `.node-version` registra esa versión. Trabajá desde la raíz de `cafe`:
 
 ```bash
 npm ci --cache /tmp/altura-npm-cache
